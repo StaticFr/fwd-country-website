@@ -1,0 +1,226 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+header {
+    background-color: black;
+    padding: 15px 0px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    position: static;
+    height: 40px;
+    width: auto;
+    display: block;
+    padding-right: 0;
+    margin-right: 10px;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 0;
+    margin-left: 50px;
+}
+
+.site-nav ul li {
+    margin: 0;
+    padding: 0 15px;
+    align-items: center;
+}
+
+.site-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    padding: 10px 15px;
+    transition: 0.3s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.site-nav ul li a:hover {
+    color: #d40000;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    right: 20px;
+    left: 20px;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+
+.drone-shot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.video-overlay h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: rgb(252, 247, 247)
+}
+
+.video-overlay p {
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif
+}
+
+.footer-home {
+    text-align: center;
+    padding: 10px;
+    background: black;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-top: 3px solid white;
+}
+
+.footer-home p {
+    font-family: 'Times New Roman', Times, serif
+}
+
+@media (max-width: 768px) {
+    .site-nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: black;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .site-nav.show {
+        display: block;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .site-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .site-nav ul li a {
+        font-size: 18px;
+    }
+
+    .video-overlay h1 {
+        font-size: 30px;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .site-nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 0;
+    }
+
+    .site-nav ul li {
+        padding: 5px 0;
+    }
+   
+    .credits-overlay h2 {
+        font-size: 30px;  
+        max-width: 90%;
+        padding: 15px 25px;
+        text-align: center;
+    }
+    
+    table {
+        width: 100%; 
+        display: block;
+        overflow-x: auto; 
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .credits img {
+        max-height: 400px;
+    }
+
+    .footer-home {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
